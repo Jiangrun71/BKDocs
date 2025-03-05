@@ -31,6 +31,12 @@ helmfile -f monitor-storage.yaml.gotmpl sync  # 部署监控依赖的存储
 部署监控后台和 saas 以及监控数据链路组件：
 ``` bash
 helmfile -f 04-bkmonitor.yaml.gotmpl sync
+
+此处镜像拉取失败：
+![image](https://github.com/user-attachments/assets/d3180545-c1cd-447b-bde7-491a62ae7ac3)
+![image](https://github.com/user-attachments/assets/10aa9478-4f79-4d3f-8e9c-eb864cddba4d)
+
+
 ```
 
 约等待 5 ~ 10 分钟，期间 `bk-monitor-consul` pod 可能 `Error` 且自动重启。
